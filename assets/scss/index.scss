@@ -14,12 +14,97 @@ body {
     display: flex;
     justify-content: center;
 
-    div {
+    &>div {
         margin: 2%;
     }
 
     &.product-card-1 {
         background-color: $primary-color;
+    }
+
+    &.sidebar {
+        justify-content: start;
+    }
+}
+
+.rmt-sidebar {
+    padding: 0;
+    box-sizing: border-box;
+    width: 20vw;
+
+    .sidebar-header {
+        padding: 10px 5px;
+        padding-bottom: 0;
+        box-sizing: border-box;
+        width: 100%;
+        color: #808080;
+        // color: #D3D3D3;
+    }
+
+    .sidebar-navitem {
+        color: $black-color;
+        width: 100%;
+        margin: 0;
+        padding: 15px;
+        box-sizing: border-box;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: 0.3s;
+
+        position: relative;
+
+        &:hover {
+            background-color: rgba(#DCDCDC, 0.9);
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        
+        &.active {
+            background-color: rgba(#ffffff, 0.9);
+            opacity: 1.1;
+            color: $primary-color;
+
+            &::before {
+                content: '';
+                width: 5px;
+                height: 50px;
+                background-color: $primary-color;
+                position: absolute;
+                left: 0px;
+            }
+        }
+
+        .sidebar-link {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .sidebar-icon {
+                width: 20px;
+                height: 20px;
+                margin-right: 10px;
+            }
+        }
+    }
+
+    .sidebar-subnav {
+        margin: 0;
+        padding: 0;
+
+        .sidebar-navitem {
+            padding: 10px 0;
+            padding-left: 45px;
+            font-size: 0.9rem;
+
+            &.active {
+                &::before {
+                    height: 38px;
+                }
+            }
+        }
     }
 }
 
