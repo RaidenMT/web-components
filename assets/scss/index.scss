@@ -27,6 +27,77 @@ body {
     }
 }
 
+.rmt-header {
+    width: 100%;
+    padding: 15px 10vw;
+    // background-color: #ffffff;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .header-logo {
+        width: 100px;
+        max-height: 150px;
+    }
+
+    .header-searchbar {
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        input {
+            width: 30vw;
+            border: 1px solid #DCDCDC;
+            border-radius: 25px;
+            padding: 10px 25px;
+            transition: 0.3s;
+
+            &:hover,
+            &:focus {
+                outline: none;
+                border: 1px solid #C0C0C0;
+                transition: 0.2s;
+            }
+        }
+
+        button {
+            background-color: $primary-color;
+            border: none;
+            padding: 5px 15px;
+            border-radius: 25px;
+            transition: 0.3s;
+            position: absolute;
+            right: 3px;
+
+            img {
+                width: 20px;
+            }
+
+            &:hover {
+                opacity: 0.9;
+                transition: 0.2s;
+                cursor: pointer;
+            }
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+    
+    .header-login {
+        display: flex;
+        align-items: center;
+
+        .header-avatar {
+            width: 40px;
+            height: 40px;
+            margin-right: 15px;
+        }
+    }
+}
+
 .rmt-testimony {
     display: flex;
     flex-direction: column;
