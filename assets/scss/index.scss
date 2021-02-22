@@ -19,7 +19,7 @@ body {
     }
 
     &.product-card-1 {
-        background-color: $primary-color;
+        // background-color: $primary-color;
     }
 
     &.sidebar {
@@ -170,7 +170,8 @@ body {
     text-align: center;
     width: 230px;
     border-radius: 3%;
-
+    box-shadow: 0px 7px 10px 1px rgba(0,0,0,0.51);
+    
     .product-card-header {
         position: relative;
         display: flex;
