@@ -27,6 +27,44 @@ body {
     }
 }
 
+.rmt-nav-menu {
+    width: 100%;
+    padding: 0 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .nav-menu-logo {
+        width: 150px;
+        max-height: 150px;
+    }
+
+    .nav-menu-links {
+        a {
+            margin-left: 15px;
+            text-decoration: none;
+            color: $primary-color;
+            transition: 0.3s;
+
+            &:hover {
+                opacity: 0.9;
+                transition: 0.2s;
+            }
+        }
+
+        .nav-menu-signup {
+            border: 2px solid $primary-color;
+            padding: 10px 15px;
+            border-radius: 25px;
+
+            &:hover {
+                background-color: $primary-color;
+                color: #ffffff;
+            }
+        }
+    }
+}
+
 .rmt-hero {
     display: flex;
     justify-content: space-between;
