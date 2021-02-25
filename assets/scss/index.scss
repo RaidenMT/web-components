@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap");
 
 $primary-color: #ff9505;
 $black-color: #141414;
 
 body {
     background-color: #ffffe8;
-    font-family: 'Roboto', 'Open Sans', 'Helvetica';
+    font-family: "Roboto", "Open Sans", "Helvetica";
 
     margin: 0;
 }
@@ -14,7 +14,7 @@ body {
     display: flex;
     justify-content: center;
 
-    &>div {
+    & > div {
         margin: 2%;
     }
 
@@ -34,10 +34,79 @@ body {
         text-transform: uppercase;
     }
 
+    .filter-field {
+        display: flex;
+        // justify-content: center;
+        align-items: center;
+
+        .filter-input {
+            padding: 10px 15px;
+            border: none;
+            border-bottom: 2px solid $primary-color;
+            outline: none;
+    
+            margin-top: 5px;
+            font-size: 1.1rem;
+
+            &:focus + .filter-input-icon {
+                opacity: 1;
+                transition: 0.2s;
+            }
+        }
+        .filter-input-icon {
+            width: 20px;
+            height: 20px;
+            opacity: 0;
+            transform: translateX(-30px);
+            transition: 0.3s;
+        }
+    }
+
     .filter-options {
         margin-top: 10px;
         display: flex;
         flex-wrap: wrap;
+
+        &.filter-tag {
+            .filter-option {
+                padding: 5px;
+                border: 1px solid $primary-color;
+                // color: $primary-color;
+                background-color: $primary-color;
+                color: #ffffff;
+                position: relative;
+                transition: 0.3s;
+
+                &::after {
+                    content: "";
+                    // width: 5px;
+                    // height: 5px;
+                    // padding: 4px;
+                    padding: 0;
+                    // margin-left: 10px;
+                    // margin-right: 5px;
+                    color: $black-color;
+
+                    background-image: url("../img/icons/filters/letter-x.svg");
+                    background-position: center;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+
+                    transition: 0.3s;
+                }
+
+                &:hover {
+                    transition: 0.2s;
+                    opacity: 0.8;
+
+                    &::after {
+                        padding: 4px;
+                        margin-left: 10px;
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
 
         &.filter-size {
             .filter-option {
@@ -59,7 +128,6 @@ body {
         }
 
         &.filter-color {
-
             .filter-option {
                 width: 25px;
                 height: 25px;
@@ -82,7 +150,7 @@ body {
                 &:after {
                     width: 25px;
                     height: 25px;
-                    content: '';
+                    content: "";
                     background-color: $black-color;
                     border-radius: 100%;
                 }
@@ -94,7 +162,7 @@ body {
                 &.gray {
                     border-color: #cbd4c2;
                     &:hover,
-                    &.selected  {
+                    &.selected {
                         border-color: $black-color;
                     }
                     &:after {
@@ -173,7 +241,7 @@ body {
                 &.green {
                     border-color: #093824;
                     &:after {
-                        background-color: #093824;  
+                        background-color: #093824;
                     }
                 }
             }
@@ -278,7 +346,7 @@ body {
     width: 100%;
     padding: 15px 10vw;
     // background-color: #ffffff;
-    
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -295,7 +363,7 @@ body {
 
         input {
             width: 30vw;
-            border: 1px solid #DCDCDC;
+            border: 1px solid #dcdcdc;
             border-radius: 25px;
             padding: 10px 25px;
             transition: 0.3s;
@@ -303,7 +371,7 @@ body {
             &:hover,
             &:focus {
                 outline: none;
-                border: 1px solid #C0C0C0;
+                border: 1px solid #c0c0c0;
                 transition: 0.2s;
             }
         }
@@ -332,7 +400,7 @@ body {
             }
         }
     }
-    
+
     .header-login {
         display: flex;
         align-items: center;
@@ -353,7 +421,7 @@ body {
     padding: 50px 20px;
     border-radius: 3%;
     background-color: #ffffff;
-    box-shadow: 0px 7px 10px 1px rgba(0,0,0,0.51);
+    box-shadow: 0px 7px 10px 1px rgba(0, 0, 0, 0.51);
 
     width: 300px;
 
@@ -413,19 +481,18 @@ body {
         position: relative;
 
         &:hover {
-            background-color: rgba(#DCDCDC, 0.9);
+            background-color: rgba(#dcdcdc, 0.9);
             transition: 0.3s;
             cursor: pointer;
         }
 
-        
         &.active {
             background-color: rgba(#ffffff, 0.9);
             opacity: 1.1;
             color: $primary-color;
 
             &::before {
-                content: '';
+                content: "";
                 width: 5px;
                 height: 50px;
                 background-color: $primary-color;
@@ -479,7 +546,6 @@ body {
         font-size: 1.1rem;
         text-decoration: none;
     }
-    
 }
 
 .rmt-product-card {
@@ -488,8 +554,8 @@ body {
     text-align: center;
     width: 230px;
     border-radius: 3%;
-    box-shadow: 0px 7px 10px 1px rgba(0,0,0,0.51);
-    
+    box-shadow: 0px 7px 10px 1px rgba(0, 0, 0, 0.51);
+
     .product-card-header {
         position: relative;
         display: flex;
@@ -521,7 +587,7 @@ body {
             transform: translateY(100px);
         }
     }
-    
+
     .product-card-body {
         margin-bottom: 15px;
 
@@ -545,7 +611,7 @@ body {
         padding: 15px;
         margin-bottom: 15px;
         border-radius: 5%;
-        
+
         font-size: 0.7rem;
         text-transform: uppercase;
 
@@ -560,5 +626,4 @@ body {
             transition: 0.4s;
         }
     }
-
 }
