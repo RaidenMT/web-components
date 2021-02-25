@@ -27,6 +27,169 @@ body {
     }
 }
 
+.rmt-filters {
+    .filter-title {
+        font-size: 0.9rem;
+        opacity: 0.8;
+        text-transform: uppercase;
+    }
+
+    .filter-options {
+        margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+
+        &.filter-size {
+            .filter-option {
+                border: 1px solid rgba(0, 0, 0, 0.8);
+                padding: 5px 8px;
+                transition: 0.3s;
+
+                &:hover,
+                &.selected {
+                    background-color: $primary-color;
+                    color: #ffffff;
+                    transition: 0.2s;
+                    border: 1px solid #ffffff;
+                }
+                &:hover {
+                    background-color: rgba($primary-color, 0.8);
+                }
+            }
+        }
+
+        &.filter-color {
+
+            .filter-option {
+                width: 25px;
+                height: 25px;
+                border-radius: 100%;
+                border: 2px solid $black-color;
+                padding: 3px;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                opacity: 0.3;
+                transition: 0.3s;
+
+                &:hover {
+                    opacity: 0.8;
+                    transition: 0.2s;
+                }
+
+                &:after {
+                    width: 25px;
+                    height: 25px;
+                    content: '';
+                    background-color: $black-color;
+                    border-radius: 100%;
+                }
+
+                &.selected {
+                    opacity: 1;
+                }
+
+                &.gray {
+                    border-color: #cbd4c2;
+                    &:hover,
+                    &.selected  {
+                        border-color: $black-color;
+                    }
+                    &:after {
+                        background-color: #cbd4c2;
+                    }
+                }
+
+                &.white {
+                    border-color: #edeec9;
+                    opacity: 0.9;
+                    &:hover,
+                    &.selected {
+                        border-color: $black-color;
+                    }
+                    &:after {
+                        background-color: #edeec9;
+                    }
+                }
+
+                &.yellow {
+                    border-color: #e4ff1a;
+                    &:after {
+                        background-color: #e4ff1a;
+                    }
+                }
+
+                &.sky-blue {
+                    border-color: #1be7ff;
+                    &:after {
+                        background-color: #1be7ff;
+                    }
+                }
+
+                &.orange {
+                    border-color: #ff5714;
+                    &:after {
+                        background-color: #ff5714;
+                    }
+                }
+
+                &.pink {
+                    border-color: #9c0d38;
+                    &:after {
+                        background-color: #9c0d38;
+                    }
+                }
+
+                &.black {
+                    border-color: #223127;
+                    &:after {
+                        background-color: #223127;
+                    }
+                }
+
+                &.brown {
+                    border-color: #654236;
+                    &:after {
+                        background-color: #654236;
+                    }
+                }
+
+                &.red {
+                    border-color: #c73e1d;
+                    &:after {
+                        background-color: #c73e1d;
+                    }
+                }
+
+                &.blue {
+                    border-color: #2e86ab;
+                    &:after {
+                        background-color: #2e86ab;
+                    }
+                }
+
+                &.green {
+                    border-color: #093824;
+                    &:after {
+                        background-color: #093824;  
+                    }
+                }
+            }
+        }
+
+        .filter-option {
+            margin-right: 10px;
+            margin-bottom: 10px;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
 .rmt-nav-menu {
     width: 100%;
     padding: 0 10%;
