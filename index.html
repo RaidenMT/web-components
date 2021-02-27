@@ -7,6 +7,8 @@
     <title>Web Components</title>
 
     <link rel="stylesheet" href="./assets/css/index.min.css">
+
+    <link rel="stylesheet" href="./assets/css/splide-2.4.21/dist/css/splide.min.css">
 </head>
 <body>
 
@@ -16,6 +18,25 @@
     <p>Además otra función que tendrá será su customización (leve, nada especial) en la misma página, pero que al cambiar dichos parámetros cambie para todos los componentes y pueda mantener la misma esencia.</p>
     <p>En resumen, será una autoayuda para hacer sitios web super fáciles y rápidos. ¿En dónde optimiza el tiempo a diferencia de otros? En la función de copiar y pegar.</p>
     <p>Y servirá de práctica, pues la meta es hacer un componente por día.</p>
+
+    <h2>Promotions Slider</h2>
+    <div class="section">
+        <div class="rmt-promotions-slider splide" id="splide">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide">
+                        <img src="./assets/img/promotions/promotion-1.png" alt="">
+                    </li>
+                    <li class="splide__slide">
+                        <img src="./assets/img/promotions/promotion-2.png" alt="">
+                    </li>
+                    <li class="splide__slide">
+                        <img src="./assets/img/promotions/promotion-3.png" alt="">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
     <h2>Filters</h2>
     <div class="section">
@@ -204,6 +225,7 @@
                 <img class="product-card-shadow" src="./assets/img/product-card/product-card-shadow.png" alt="">
             </div>
 
+            <li class="splide__slide">Slide 1</li>
             <div class="product-card-body">
                 <h4 class="product-card-title">Garnier</h4>
                 <p class="product-card-desc">Garnier Pure Actie Micellar<br/>Cleasing Water .125 ml</p>
@@ -215,5 +237,8 @@
     </div>
     <div>Icons made by <a href="https://icon54.com/" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
 
+
+    <script src="./assets/css/splide-2.4.21/dist/js/splide.min.js"></script>
+    <script src="./assets/js/index.js"></script>
 </body>
 </html>
