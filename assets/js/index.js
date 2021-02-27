@@ -1,3 +1,11 @@
+new Splide('#productSplide', {
+    height: '60vh',
+    type: 'loop',
+    autoplay: true,
+	perPage: 3,
+	perMove: 1,
+}).mount();
+
 new Splide('#splide', {
     direction: 'ttb',
     width: '100vw',
