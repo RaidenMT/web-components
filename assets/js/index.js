@@ -1,7 +1,9 @@
 new Splide('#productSplide', {
-    height: '60vh',
+    autoWidth: true,
+    height: '50vh',
     type: 'loop',
     autoplay: true,
+    gap: '15px',
 	perPage: 3,
 	perMove: 1,
 }).mount();
