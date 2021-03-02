@@ -39,6 +39,74 @@ body {
     border-top: 1px solid rgba($black-color, $alpha: 0.3);
 }
 
+
+.rmt-footer {
+    width: 100%;
+    padding: 5vh 10%;
+    background-color: $black-color;
+    color: #ffffff;
+
+    .footer-logo {
+        width: 100px;
+    }
+
+    .divider {
+        border-color: rgba(#ffffff, 0.8);
+        margin: 50px 0;
+    }
+
+    .footer-info {
+        display: flex;
+
+        .footer-buttons {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .footer-stores {
+                display: flex;
+
+                img {
+                    margin-right: 10px;
+                }
+            }
+        }
+
+        .footer-links {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+
+            .footer-link-section {
+                display: flex;
+                flex-direction: column;
+                width: 22%;
+
+                margin-left: 11%;
+                margin-bottom: 25px;
+
+                .footer-link-title {
+                    font-size: 1.1rem;
+                    color: rgba(#ffffff, 0.7);
+                    margin-bottom: 15px;
+                }
+
+                .footer-link {
+                    margin-bottom: 5px;
+                    color: #ffffff;
+                    text-decoration: none;
+                    transition: 0.3s;
+
+                    &:hover {
+                        opacity: 0.8;
+                        transition: 0.2s;
+                    }
+                }
+            }
+        }
+    }
+}
+
 .rmt-card {
     padding: 30px;
     background-color: #ffffff;
