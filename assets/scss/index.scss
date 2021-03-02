@@ -35,6 +35,106 @@ body {
     // height: 100vh;
 }
 
+.divider {
+    border-top: 1px solid rgba($black-color, $alpha: 0.3);
+}
+
+.rmt-card {
+    padding: 30px;
+    background-color: #ffffff;
+    text-align: center;
+    width: 200px;
+    border-radius: 3%;
+    // box-shadow: 2px 7px 10px 1px rgba(0, 0, 0, 0.51);
+    box-shadow: 4px 4px 16px 2px rgba(0, 0, 0, 0.1);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &.price-card {
+        text-align: left;
+        color: rgba($black-color, $alpha: 0.8);
+
+        .price-card-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: $black-color;
+            // margin-top: 10px;
+            margin-bottom: 20px;
+
+            span {
+                position: relative;
+                z-index: 5;
+            
+                &::before {
+                    content: '';
+                    position: absolute;
+                    border-top: 0.5rem solid rgba($primary-color, 0.9);
+                    width: 110%;
+                    bottom: 0.2rem;
+                    z-index: -1;
+                }
+            }
+        }
+        
+        .price-card-money {
+            display: flex;
+
+            .price-card-money-symbol {
+                font-size: 1.1rem;
+            }
+            .price-card-money-amount {
+                font-size: 3rem;
+                font-weight: 700;
+                line-height: 0.8;
+                color: $black-color;
+                margin: 0 5px;
+            }
+
+            .price-card-money-billing-type {
+                font-size: 1.1rem;
+                align-self: flex-end;
+            }
+        }
+        .price-card-money-desc {
+            margin-bottom: 50px;
+            margin-top: 25px;
+        }
+
+        .price-card-desc {
+            line-height: 1.5;
+            font-weight: 400;
+
+            margin-bottom: 50px;
+        }
+
+        .price-card-button {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+
+            background-color: $black-color;
+            color: #ffffff;
+            font-size: 1.2rem;
+
+            box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.35);
+            transition: 0.2s;
+
+            &:hover {
+                cursor: pointer;
+                opacity: 0.9;
+                transition: 0.3s;
+
+                transform: translateY(-5px);
+                box-shadow: 0 11px 16px 0 rgba(0, 0, 0, 0.35);
+            }
+        }
+    }
+}
+
 .rmt-filters {
     .filter-title {
         font-size: 0.9rem;
@@ -562,7 +662,7 @@ body {
     text-align: center;
     width: 230px;
     border-radius: 3%;
-    box-shadow: 0px 7px 10px 1px rgba(0, 0, 0, 0.51);
+    box-shadow: 2px 7px 10px 1px rgba(0, 0, 0, 0.51);
 
     .product-card-header {
         position: relative;

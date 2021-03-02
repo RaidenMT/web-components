@@ -3,7 +3,7 @@ new Splide('#productSplide', {
     height: '50vh',
     type: 'loop',
     autoplay: true,
-    gap: '15px',
+    gap: '30px',
 	perPage: 3,
 	perMove: 1,
 }).mount();
